@@ -19,7 +19,7 @@ export default function ProjectSlider() {
             title: "Calorizz - iOS Calorie Tracker App",
             desc: "An iOS application for calculating food calories using a scanning feature and a categorized food list.",
             tech: ["Figma", "Swift", "Git", "GitHub"],
-            img: "/project-1.png",
+            img: "/Project-1.png",
             link: "https://github.com/zensantomart017/CalorieTrackerApp-CALORIZZ"
         },
         {
@@ -27,7 +27,7 @@ export default function ProjectSlider() {
             title: "S'Mart Weather - iOS Weather Tracker App",
             desc: "An iOS app for tracking real-time weather using SwiftUI.",
             tech: ["Figma", "Swift", "GitHub"],
-            img: "/project-2.png",
+            img: "/Project-2.png",
             link: "https://github.com/zensantomart017/WeatherApp-SMart-Weather"
         },
         {
@@ -35,7 +35,7 @@ export default function ProjectSlider() {
             title: "Roiyall Coffee Website Design and Development.",
             desc: "A website development project for Roiyall Coffee, Siborong-borong, Sumatera Utara, Indonesia.",
             tech: ["Figma", "PHP", "Laravel", "Bootstrap", "Git", "GitHub"],
-            img: "/project-3.jpeg",
+            img: "/Project-3.jpeg",
             link: "https://github.com/zensantomart017/PA-1-Rancang-Bangun-Website-Roiyall-Coffee"
         },
         {
@@ -43,7 +43,7 @@ export default function ProjectSlider() {
             title: "Kawal- PTN Website Development.",
             desc: "A web platform developed to help students prepare for PTN entrance by providing tryout features and university information.",
             tech: ["Figma", "Javascript", "Golang", "React JS", "Tailwind CSS"],
-            img: "/project-4.png",
+            img: "/Project-4.png",
             link: "https://github.com/jmsrzk14/PA2-Kel08"
         },
     ];

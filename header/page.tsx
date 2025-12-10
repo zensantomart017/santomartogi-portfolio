@@ -103,7 +103,11 @@ export default function Header() {
                     </div>
                 </div> */}
                 <div
-                    className="relative rounded-full overflow-hidden w-[45vw] h-[45vw] sm:w-[55vw] sm:h-[55vw] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[420px] lg:w-[420px] lg:h-[420px]"
+                    className="relative rounded-full overflow-hidden
+    w-[60vw] h-[60vw]
+    sm:w-[50vw] sm:h-[50vw]
+    md:w-[300px] md:h-[300px]
+    lg:w-[420px] lg:h-[420px]"
                 >
                     <Image
                         src={Hero}
@@ -127,21 +131,21 @@ export default function Header() {
             {/* Stats */}
             <div className="w-full mt-20">
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-25 px-[15%]">
-                {statsData.map((stat, index) => (
-                    <div key={index} className='flex gap-2 items-center'>
-                        <h1
-                            ref={(el) => {
-                                countRefs.current[index] = el;
-                            }}
-                            className='text-6xl lg:text-7xl font-unbounded font-bold'
-                        >
-                            0
-                        </h1>
-                        <p className="text-lg lg:text-xl text-gray-400 font-semibold whitespace-pre-line">
-                            {stat.label}
-                        </p>
-                    </div>
-                ))}
+                    {statsData.map((stat, index) => (
+                        <div key={index} className='flex gap-2 items-center'>
+                            <h1
+                                ref={(el) => {
+                                    countRefs.current[index] = el;
+                                }}
+                                className='text-6xl lg:text-7xl font-unbounded font-bold'
+                            >
+                                0
+                            </h1>
+                            <p className="text-lg lg:text-xl text-gray-400 font-semibold whitespace-pre-line">
+                                {stat.label}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </header>

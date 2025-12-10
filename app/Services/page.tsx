@@ -6,22 +6,22 @@ const ServicesData = [
     {
         id: '01',
         title: "Web Development",
-        desc: "Lorem"
+        desc: "Lorem Ipsum"
     },
     {
         id: '02',
         title: "iOS App Development",
-        desc: "Lorem"
+        desc: "Lorem Ipsum"
     },
     {
         id: '03',
         title: "Full-Stack",
-        desc: "Lorem"
+        desc: "Lorem Ipsum"
     },
     {
         id: '04',
         title: "Cyber Security",
-        desc: "Lorem"
+        desc: "Lorem Ipsum"
     }
 ]
 

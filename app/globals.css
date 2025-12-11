@@ -13,9 +13,8 @@
   --black-color: #000;
   --white-color: #fff;
   --text-color: #32455e;
-  --transition-regular:0.3s;
-  --transition-slow:0.6s;
-
+  --transition-regular: 0.3s;
+  --transition-slow: 0.6s;
 }
 
 /* Font Family */
@@ -23,6 +22,7 @@
   .font-sora {
     font-family: var(--font-sora), sans-serif;
   }
+
   .font-unbounded {
     font-family: var(--font-unbounded), cursive;
   }
@@ -35,13 +35,13 @@ body {
 }
 
 /* Navbar */
-.active-links{
+.active-links {
   color: var(--primary-color);
 }
 
-.active-links:after, 
+.active-links:after,
 .nav-menu a:after,
-.menu li a:after{
+.menu li a:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -53,35 +53,35 @@ body {
 }
 
 .nav-menu a:after,
-.menu li a:after{
+.menu li a:after {
   opacity: 0;
 }
 
 .nav-menu a:hover:after,
-.menu li a:hover:after{
+.menu li a:hover:after {
   opacity: 1;
 }
 
-.menu li a{
+.menu li a {
   padding-bottom: 10px;
 }
 
-.active-links:after{
+.active-links:after {
   opacity: 1 !important;
 }
 
 /* Header */
-.hero-image:after{
+.hero-image:after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, 
-  rgba(255,255,255,0.05) 0%, 
-  rgba(12, 77, 107, 0.274) 100%);
+  background: radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(12, 77, 107, 0.274) 100%);
   pointer-events: none;
 }
 
-.hero-social i{
+.hero-social i {
   width: 50px;
   height: 50px;
   border: 1px solid var(--primary-color);
@@ -93,74 +93,82 @@ body {
   transition: var(--transition-regular);
 }
 
-.hero-social i:hover{
+.hero-social i:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
   transform: translateY(-10px);
 }
 
 /* Services */
-.stroke-text{
+.stroke-text {
   -webkit-text-stroke: 1px var(--white-color);
   -webkit-text-fill-color: transparent;
   transition: var(--transition-regular);
 }
 
-.service-card:hover .stroke-text{
+.service-card:hover .stroke-text {
   -webkit-text-stroke: 1px var(--primary-color);
 }
 
-/* custom-scrollbar */
-.custom-scrollbar::-webkit-scrollbar{
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
-.custom-scrollbar::-webkit-scrollbar-track{
+
+.custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
-.custom-scrollbar::-webkit-scrollbar-thumb{
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   border-radius: 4px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
-.custom-scrollbar::-webkit-scrollbar-thumb:hover{
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-color);
 }
 
-
-/*  Work */
+/* Work */
 @keyframes Anim-bottom {
-  0%{
+  0% {
     transform: translateY(-50%);
     opacity: 0;
   }
-  100%{
+
+  100% {
     transform: translateY(0%);
     opacity: 1;
   }
 }
 
-.work-content h2{
+.work-content h2 {
   opacity: 0;
   animation: Anim-bottom var(--transition-regular) 1.4s forwards linear;
 }
-.work-content h3{
+
+.work-content h3 {
   opacity: 0;
   animation: Anim-bottom var(--transition-regular) 1.2s forwards linear;
 }
-.work-content p{
+
+.work-content p {
   opacity: 0;
   animation: Anim-bottom var(--transition-regular) 1s forwards linear;
 }
-.work-icons{
+
+.work-icons {
   opacity: 0;
   animation: Anim-bottom var(--transition-regular) 0.8s forwards linear;
 }
-.work-share{
+
+.work-share {
   opacity: 0;
   animation: Anim-bottom var(--transition-regular) 0.6s forwards linear;
 }
-.work-image{
+
+.work-image {
   opacity: 0;
   animation: Anim-bottom var(--transition-regular) 0.3s forwards linear;
 }
@@ -169,25 +177,185 @@ body {
 .contact-col {
   cursor: pointer;
 }
-.contact-col span{
+
+.contact-col span {
   transition: var(--transition-regular);
 }
-.contact-col:hover span{
+
+.contact-col:hover span {
   border-color: -var(--white-color);
   color: var(--white-color);
 }
 
+/* Profile Image Border Animations */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 1;
+    filter: blur(8px);
+  }
+
+  50% {
+    opacity: 0.7;
+    filter: blur(12px);
+  }
+}
+
+@keyframes pulse-glow-intense {
+
+  0%,
+  100% {
+    opacity: 1;
+    filter: blur(15px);
+  }
+
+  50% {
+    opacity: 0.9;
+    filter: blur(20px);
+  }
+}
+
+@keyframes pulse-planet {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-planet-fast {
+
+  0%,
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.9;
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 5s linear infinite;
+}
+
+.animate-rotate {
+  animation: rotate 8s linear infinite;
+}
+
+.animate-rotate-fast {
+  animation: rotate 2s linear infinite !important;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-reverse 12s linear infinite;
+}
+
+.animate-orbit-fast {
+  animation: orbit-reverse 3s linear infinite !important;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow-intense {
+  animation: pulse-glow-intense 1.5s ease-in-out infinite !important;
+}
+
+.animate-pulse-planet {
+  animation: pulse-planet 2s ease-in-out infinite;
+}
+
+.animate-pulse-planet-fast {
+  animation: pulse-planet-fast 0.8s ease-in-out infinite !important;
+}
+
+.animate-pulse-planet-delay-1 {
+  animation: pulse-planet 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-pulse-planet-delay-2 {
+  animation: pulse-planet 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-pulse-planet-delay-3 {
+  animation: pulse-planet 2s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-border-flow {
+  animation: border-flow 4s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Project Card Border Animation */
 .animated-border {
   position: absolute;
   inset: 0;
   border-radius: 0.75rem;
   padding: 1.5px;
   background: linear-gradient(120deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(220, 220, 220, 0.4),
-    rgba(255, 255, 255, 0.1)
-  );
+      rgba(255, 255, 255, 0.1),
+      rgba(220, 220, 220, 0.4),
+      rgba(255, 255, 255, 0.1));
   background-size: 200% 200%;
   animation: silverMove 3s linear infinite;
   opacity: 0;
@@ -195,27 +363,25 @@ body {
   transition: opacity .35s ease;
 }
 
-/* Border aktif saat hover card */
 .group:hover .animated-border {
   opacity: 1;
 }
 
-/* Membuat border menyala dan bergerak */
 @keyframes silverMove {
   0% {
-      background-position: 0% 50%;
-    }
-  
-    50% {
-      background-position: 100% 50%;
-    }
-  
-    100% {
-      background-position: 0% 50%;
-    }
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-
+/* Skill Card Border Animation */
 .skill-card {
   position: relative;
 }
@@ -226,7 +392,6 @@ body {
   inset: 0;
   border-radius: 0.6rem;
   padding: 1.5px;
-  /* border tipis elegan */
   z-index: 0;
   background: linear-gradient(120deg,
       rgba(255, 255, 255, 0.05),
@@ -237,7 +402,6 @@ body {
   transition: opacity 0.3s ease;
   animation: silverFlow 4s linear infinite;
   pointer-events: none;
-  /* tidak mengganggu hover */
 }
 
 .skill-card:hover .animated-silver-border {
@@ -258,9 +422,24 @@ body {
   }
 }
 
+.orbit-container {
+  --orbit-speed: 12s;
+  animation: orbit-reverse var(--orbit-speed) linear infinite;
+}
 
+.orbit-container-fast {
+  --orbit-speed: 3s;
+}
+
+@keyframes orbit-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+
+/* Responsive */
 @media (max-width:991px) {
-  body{
+  body {
     overflow-x: hidden !important;
     overflow-y: scroll !important;
   }

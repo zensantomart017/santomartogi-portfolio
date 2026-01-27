@@ -99,7 +99,7 @@ export default function Header() {
                     {/* Buttons */}
                     <div className="flex flex-wrap gap-6 items-center">
                         <Link
-                            href="/Santo Martogi Simangunsong-resume-(eng).pdf"
+                            href="/SANTO MARTOGI SIMANGUNSONG-CV.pdf"
                             download
                             className="border border-[var(--primary-color)] font-bold text-[var(--primary-color)] px-6 py-3
                     rounded hover:bg-[var(--primary-color)] hover:text-white transition-all duration-500"
